@@ -1,0 +1,62 @@
+/*** WIDGET STYLES ***/
+
+/* TODO
+
+- test rectangular clip
+- style, test for smaller size
+- control span width to remove cursor pointer from entire header
+
+*/
+
+
+/* Base Style */
+.widget {
+  height: 296px;
+  width: 507px;
+  color: #ffffff;
+  background: #2a426c;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  margin-left: -253px;
+  
+  background: -moz-linear-gradient(top,  #2a426c 0%, #3a5b99 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2a426c), color-stop(100%,#3a5b99));
+  background: -webkit-linear-gradient(top,  #2a426c 0%,#3a5b99 100%);
+  background: -ms-linear-gradient(top,  #2a426c 0%,#3a5b99 100%);
+  background: linear-gradient(to bottom,  #2a426c 0%,#3a5b99 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a426c', endColorstr='#3a5b99',GradientType=0 );
+}
+
+/* Widget Header */
+.widget .widget-header {color: #c6c6c6;}
+.widget .widget-header .widgetClose {
+  display: block;
+  padding: 10px 15px 0 0;
+  text-align: right;
+  cursor: pointer;
+}
+
+/* Widget Body */
+.widget .widget-body h1 {
+  font-size: 16px;
+  text-align: right;
+}
+.widget .widget-body h2 {
+  color: #cadeff;
+  font-size: 14px;
+}
+
+.widget .widget-body .campaign-photo {
+  display: inline-block;
+}
+
+/* Special handling for photo */
+@media (max-width: 1200px) {
+  .widget .widget-body .campaign-photo {
+    clip: rect(10px, 20px, 30px, 40px);
+  }
+}
+
+
+/* Widget Footer */
